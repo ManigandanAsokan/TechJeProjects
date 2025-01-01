@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+  <title>Flying World Migration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="style.css?v4">
+<style>
+  d-row,d-col{display: block;}
+  header{position:sticky !important;top: 0;background-color:#fff;}
+  .bg-head{height: 300px;background-image: url(png/Untitled-1.jpg);}
+  .about-us .head{text-align: left;}
+  .hbar,.vbar{background-color:#444;}
+  .hbar{width:50px;height: 2px;margin-right:1em;}
+  .vbar{width:2px;height:50px;}
+  .dot{width: 10px;height: 10px;background-color:rgb(31, 52, 119);}
+  .box-icon{border:1px solid rgb(31, 52, 119);padding: 10px;transition:background-color 200ms ease;}
+  .set{max-width: 800px;margin:auto;display: flex;justify-content: center;align-items: center;
+    flex-direction: column; }
+  .set .row .col-6:last-child figure{transform:translateX(-20px);} 
+  .set .row .col-6:first-child .set-text{padding-right: 20px;text-align: right;}
+  .set .row .col-6:last-child .set-text{padding-left: 20px;}
+  .set p{margin: 0;}.set figure{width:calc(100% + 20px);}
+
+  .set:hover .box-icon{background-color: rgb(31, 52, 119);}
+  .set:hover .box-icon img{filter: invert(1);}
+  .set figure{position: relative;}
+  .set figure .ov{position:absolute;background-color:rgba(0, 0, 0, 0.8);width: 100%;display: flex;
+    justify-content: center;align-items: center;font-size: 1.5rem;
+  height: 100%;left: 0;top: 0;color: #fff;opacity: 0;transition: opacity 300ms ease;}
+  .set:hover figure .ov{opacity:1;}
+  .feature-center{background-color:rgb(31, 52, 119);padding:50px 20px 100px 20px;color:#fff;position: relative;}
+  .featurebg{background-color:rgb(31, 52, 119);position: absolute;bottom: 100%;height: 72px;padding-top:180px;padding-left: 10%;text-align: center;width: 100%;left: 0;}
+  .fbox{position: relative;display: block;background: #fff;z-index:2;
+    text-align: center;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)}
+  .fbox h4{color: #222222;margin: 0px;font-size:20px;font-weight: 600;padding:24px 15px;}
+  .fbox:hover img{transform: scale(1.03);}
+  .fbox.fbox2{animation-delay:150ms;}
+  .fbox.fbox3{animation-delay:300ms;}
+  .btn{background-color: rgb(31, 52, 119);color: #fff;}
+  .whowe-are-area {position: relative;display: block;background:#ffffff;padding: 0;margin-top: 0;}
+.whowe-are-area .layer-outer {position: absolute;top:0;left: 0;right: 0;height: 540px;background-size: cover;padding: 60px;
+background-attachment: scroll;background-position: center top;background-repeat: no-repeat;}
+.whowe-are-area .sec-title{position: relative;z-index: 1;padding-top: 0;}
+.single-featured-box {position: relative;display: block;padding: 25px 0 50px;margin-bottom: 50px;z-index: 2;}
+.single-featured-box .count-box {position: absolute;top: 0;left: 0;right: 0;width: 50px;
+height: 50px;margin: 0 auto;background: #ffffff;border: 1px solid #0098ff;border-radius: 50%;
+color: #031f4b;font-size: 16px;line-height: 48px;font-weight: 600;z-index: 2;}
+.single-featured-box .inner-box {position: relative;display: block;background: #031f4b;
+    height: 210px;
+  padding: 54px 30px 40px;border-top-right-radius: 20px;border-bottom-left-radius: 20px;}
+.single-featured-box h3 {font-size: 24px;line-height: 30px;font-weight: 600;margin: 0 0 23px;
+    color: #ffffff;text-transform: capitalize;}
+.single-featured-box .border-box {position: relative;display: block;width: 40px;height: 2px;background: #0098ff;margin: 0 auto;}
+.single-featured-box .border-box::before {position: absolute;content: '';top: -5px;left: 0;bottom: 0;
+right: 0;width: 12px;height: 12px;background: #ffffff;border-radius: 50%;margin: 0 auto;}
+.single-featured-box .text {display: block;position: relative;padding: 22px 0 40px;}
+.single-featured-box .text p {margin: 0;color: #ffffff;}
+.single-featured-box .icon-holder {
+position: absolute;left: 0;bottom: 0;right: 0;width: 100px;height: 100px;
+margin: 0 auto;border-radius: 50%;background: #222222;z-index: 2;
+}
+.single-featured-box .icon-holder::before {position: absolute;top: 0;left: 0;bottom: 0;right: 0;
+border: 2px dashed #ffffff;content: '';z-index: -1;border-radius: 50%;}
+.single-featured-box .icon-holder span::before {
+position: relative;display: block;color: #ffffff;font-size: 50px;line-height: 50px;line-height: 100px;}
+.slogan-area {position: relative;display: block;margin-bottom: -75px;z-index: 10;}
+.slogan-content {
+position: relative;padding: 35px 50px 35px;border-radius: 20px;display: flex;flex-direction: row;justify-content: space-between;
+align-items: center;flex-wrap: wrap;background-attachment: scroll;background-position: center center;background-size: cover;
+background-repeat: no-repeat;-webkit-box-shadow: 0px -3px 13px 2px rgba(0,0,0,0.06);box-shadow: 0px -3px 13px 2px rgba(0,0,0,0.06);}
+.animated {
+-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+.slogan-content .right,.slogan-content .left {position: relative;display: block;}
+.slogan-content .left .icon, .slogan-content .left .title {display: table-cell;vertical-align: middle;}
+.slogan-content .left .icon span::before {font-size: 80px;line-height: 80px}
+.slogan-content .left .title p {margin: 0 0 8px}
+.slogan-content .left .title h3 {color: #031f4b;font-size: 22px;line-height: 32px;font-weight: 700;}
+.slogan-content .right .btns-box {position: relative;}
+  
+</style>
+</head>
+<body>
+<div class="loader-wrap">
+  <div class="preloader"></div>
+  <div class="layer layer-one"><span class="overlay"></span></div>
+  <div class="layer layer-two"><span class="overlay"></span></div>
+  <div class="layer layer-three"><span class="overlay"></span></div>
+</div>
+<header></header>
+<section class="bg-head"><h2>About Us</h2></section>
+<section class="about-us">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-md-6 col-12 init fleft">
+        <div class="head">
+          <span class="df aic mb-1"><b class="hbar"></b> Study - Tourism - Business</span>
+          <h3 class="title"><strong>About</strong></h3>
+        </div>
+            <p>Flying World Migration in Tamilnadu, UAE is the leading Visa consultancy that cater to the needs of any individual. This well-known establishment service customers since 2020 both Gulf & rest of the world, from promising you perfect professional service and peace of mind.</p>
+            <p>We have an ample experience in our industry, especially in PR, Work Permit, Student, Residency by Investment Visa to any country such as Canada, Australia, New Zealand, UK and more. We strongly believe that regular and blunt communication between clients is the most vital part of the relationship with the client.</p>
+      </div>
+      <div class="col-md-6 col-12 init fright">
+        <img src="countryimag/fly1.jpg" alt="">
+        <!--<img src="countryimag/flight.jpg" alt=""><br>-->
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section class="feature pt-5">
+  <div class="container">
+    <d-row class="row">
+      <d-col class="col-12 col-md-4">
+        <div class="fbox hov hov-o anime fbottom">
+          <figure><img src="img/feature-1.jpg" alt="Apply Visa Online"></figure>
+          <h4>Flying World Migration</h4>
+        </div>
+      </d-col>
+      <d-col class="col-12 col-md-4">
+        <div class="fbox fbox2 hov hov-o anime fbottom">
+          <figure><img src="img/feature-2.jpg" alt="Important Information"></figure>
+          <h4>Important Information</h4>
+        </div>
+      </d-col>
+      <d-col class="col-12 col-md-4">
+        <div class="fbox fbox3 hov hov-o anime fbottom">
+          <figure><img src="img/feature-3.jpg" alt="Immigration Resources"></figure>
+          <h4>Immigration Resources</h4></div>
+      </d-col>
+    </d-row>
+  </div>
+  <div class="tac feature-center">
+    <div class="featurebg"></div>
+    <h1>Unparalleled Consultancy from Experienced Lawyers</h1>
+    <h4>Flying World migration gives their consultancy by a registered and experienced lawyer.</h4>
+  </div>
+</section>
+<section class='whowe-are-area ct pm'>
+  <div class='layer-outer' style='background-image: url(countryimag/aback.png)'></div>
+  <div class='sec-title text-center'>
+    <h2 style="padding: 20px;">OUR MISSION</h2>
+    <p style="padding: 20px;">Once you have decided that you are comfortable with our assessment, we will provide you with 
+a complete breakdown of all service fees from beginning to end with no hidden fees! We also 
+offer flexible payment plans and you don’t pay anything more.
+</p>
+  </div>
+  <div class='row'>
+    <!--Start Single Featured Box-->
+    <div class='col-xl-4 col-lg-4'>
+        <div class='single-featured-box text-center'>
+            <div class='count-box counted'>01</div>
+            <div class='inner-box'>
+                <h3>Immigration advice and information as per the current laws</h3>
+                <div class='border-box'></div>
+                <div class='text'>
+                    <p></p>
+                </div>
+            </div> 
+            <div class='icon-holder'>
+                <span class='flaticon-technology'></span>
+            </div>   
+        </div>    
+    </div>
+    <!--End Single Featured Box-->
+    <!--Start Single Featured Box-->
+    <div class='col-xl-4 col-lg-4'>
+        <div class='single-featured-box bg2 text-center'>
+            <div class='count-box counted'>02</div>
+            <div class='inner-box'>
+                <h3>Skill assessment preparation</h3>
+                <div class='border-box'></div>
+                <div class='text'>
+                    <p></p>
+                </div>
+            </div> 
+            <div class='icon-holder'>
+                <span class='flaticon-checking'></span>
+            </div>   
+        </div>    
+    </div>
+    <!--End Single Featured Box-->
+    <!--Start Single Featured Box-->
+    <div class='col-xl-4 col-lg-4'>
+        <div class='single-featured-box bg3 text-center'>
+            <div class='count-box counted'>03</div>
+            <div class='inner-box'>
+                <h3>Visa application preparation</h3>
+                <div class='border-box'></div>
+                <div class='text'>
+                    <p></p>
+                </div>
+            </div> 
+            <div class='icon-holder'>
+                <span class='flaticon-people-1'></span>
+            </div>   
+        </div>    
+    </div>
+    <!--End Single Featured Box-->
+  </div>    
+</section>
+
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="app.js?v4"></script>
+</body>
+</html>

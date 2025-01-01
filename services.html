@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+  <title>Flying World Migration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/splide.min.css">
+  <link rel="stylesheet" href="style.css?V4">
+<style>
+  header{position:sticky !important;top: 0;background-color:#fff;}
+  .bg-head{height: 300px;background-image: url(png/Untitled-1.jpg);}
+  
+  .slide{background-image: url(png/ser.png);padding-bottom: 20px;}
+  .slide .splide__track{padding-top: 20px;padding-bottom: 70px;margin-right: -18px;margin-left: -6px;}
+  .slide .serv-icon{width: 48px;height: 48px;padding-top: 40px;}
+  .slide .serv-icon img{margin-bottom: 10px;margin-left: 10px;}
+  .slide .serv-head{text-align: center;padding-top: 60px;}
+  .slide .serv-h4{font-size: 14px;color: rgb(28, 86, 247);padding-bottom: 15px;}
+  .slide .serv-h2{font-size: 36px;color: #fff;padding-bottom: 35px;}
+  .slide .coun-body{width: 260px;height: 370px;background-color: rgba(87, 27, 27, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;transition: all .5s ease;}
+  .slide .row{display: flex;justify-content: space-between;align-items: center;}
+  .slide .serv-title{font-size: 19px;padding-top: 97px;padding-bottom: 15px;padding-left: 10px;}
+  .slide .serv-def{font-size: 15px;padding-bottom: 5px;color: #fff;padding-left: 10px;}
+  .slide .serv-foot{display: flex;justify-content: space-between;padding-right: 35px;}
+  .slide .serv-foot .serv-next{width: 41px;height: 45px;border: 2px solid #000;
+    border-radius: 3px;transition: all .5s ease;filter: invert(30%);margin-left: 10px;}
+  .slide .serv-foot .serv-num{width: 41px;height: 41px;display: flex;justify-content: center;
+    transition: all .5s ease;filter: invert(30%);}
+  .slide .serv-foot .serv-num img{margin-right: -11px;}
+  .slide h6{padding-top: 40px;text-align: center;color: #fff;padding-bottom: 20px;}
+  .slide .down{margin-top: 60px;}
+  .slide hr{height: 2px;margin-left: 10px;}
+  .slide .serv-title a{color: #fff;}
+  .slide .coun-body:hover{transform: translateY(-10px);}
+  .slide .coun-body:hover .serv-next{filter: invert(1);}
+  .slide .coun-body:hover .serv-num{filter: invert(1);}
+
+  .count{padding-top: 80px;padding-bottom: 50px;background-color: #e3f6f9;}
+  .count .row{display: flex;justify-content: space-between;}
+  .count .count-num{font-size: 25px;padding-top: 40px;padding-bottom: 10px;}
+  .count .count-title{font-size: 18px;}
+  .count .col-3{border: 1px solid #1f3377;width: 250px;height: 250px;text-align: center;align-items: center;}
+  .count .count-in{width: 200px;height: 200px;margin-top: 25px;margin-left: 12px;transition: all .3s ease-out;}
+  .count .col-3 h4{transition: all .6s ease-out;}
+  .count .col-3 img{width: 50px;height: 50px;}
+  .count .col-3 .img-4{width: 45px;height: 45px;}
+  .count .count-icon{padding-top: 22px;}
+  .count .col-3:hover h4{transform: translateY(-10px);color: #fff;}
+  .count .col-3:hover .count-in{background-color: #1f3377;}
+  .count .col-3:hover img{filter:invert(1);}
+
+  .coach{background-image: url(png/row-bgimage-7.png);padding-top: 50px;padding-bottom: 50px;}
+  .coach .coach-img{width: 495px;}
+  .coach .coach-img-sub{background-color: rgb(31 36 55 / 90%);position: absolute;bottom: 55px;width: 87%;}
+  .coach .coach-img-sub .coach-img-bc{padding: 25px;}
+  .coach .coach-img-sub h2{font-size: 25px;color: #fff;}
+  .coach .coach-img-sub p{font-size: 17px;color: #fff;}
+  .coach .coach-img-sub a{font-size: 15px;}
+  .coach .left{position: relative;}
+  .coach .right h2{font-size: 40px;}
+  .coach .right h2 strong{color: #1f3377;}
+  .coach .right h4{font-size: 13px;color: #0067ed;}
+  .coach .sub-1{background-color: #fff;width: 265px;height: 195px;text-align: center;border-radius: 5px;transition: all .6s ease;}
+  .coach .sub-1 a{font-size: 19px;padding: 15px;}
+  .coach .sub-1 p{font-size: 15px;padding: 15px;}
+  .coach .sub-1 .sub-1-icon img{width: 54px;height: 45px;}
+  .coach .sub-1 .sub-1-icon{text-align: center;padding-top: 13px;padding-bottom: 16px;}
+  .coach .sub-main{display: flex;justify-content: space-between;margin-right: -19px;padding-top: 33px;}
+  .coach .sub-main .sub-1:hover{box-shadow: 0px 0px 37px -12px rgba(0,0,0,0.7);}
+
+</style>
+</head>
+<body>
+<div class="loader-wrap">
+  <div class="preloader"></div>
+  <div class="layer layer-one"><span class="overlay"></span></div>
+  <div class="layer layer-two"><span class="overlay"></span></div>
+  <div class="layer layer-three"><span class="overlay"></span></div>
+</div>
+<header></header>
+<section class="bg-head"><h2>Services</h2></section>
+
+<section class="coach">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12 left">
+                <div class="coach-img">
+                    <img src="countryimag/work1.jpg" alt="">
+                </div>
+                <div class="coach-img-sub">
+                    <div class="coach-img-bc">
+                        <h2>Coaching Test Preparation Series</h2>
+                        <p>Free Guid To A Top Line Band Score!</p>
+                        <a href="#">View More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 right">
+                <h4>VALUE FOR VISA FLYING WORLD MIGRATION</h4>
+                <h2>Benifits Of Visa Online<br> <strong>Flying World Migration</strong></h2>
+                <div class="sub-main">
+                    <div class="sub-1">
+                        <div class="sub-1-icon">
+                            <img src="png/182321.png" alt="">
+                        </div>
+                        <a href="#">Work Visa</a>
+                        <p>Test of English as a Foreign Language.</p>
+                    </div>
+                    <div class="sub-1">
+                        <div class="sub-1-icon">
+                            <img src="png/1456888.png" alt="">
+                        </div>
+                        <a href="#">Tourist Visa</a>
+                        <p>PTE stands for Pearson Test of English.</p>
+                    </div>
+                </div>
+                <div class="sub-main">
+                    <div class="sub-1">
+                        <div class="sub-1-icon">
+                            <img src="png/1358533.png" alt="">
+                        </div>
+                        <a href="#">Transit Visa</a>
+                        <p>International English Language Testing System.</p>
+                    </div>
+                    <div class="sub-1">
+                        <div class="sub-1-icon">
+                            <img src="png/certificate.png" alt="">
+                        </div>
+                        <a href="#">Student Visa</a>
+                        <p>Graduate Management Admission Test.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div class="container">
+        <div class="serv-head">
+            <h4 class="serv-h4">WHAT WE DO</h4>
+            <h2 class="serv-h2">We Provide Experts Create Great <br>Value For <strong>Visa Categories</strong></h2>
+        </div>
+        <div class="splide splide1">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+           <div class="coun-body">
+            <div class="serv-icon">
+                <img src="png/001-passport.png" alt="">
+                <hr>
+            </div>
+            <h4 class="serv-title"><a href="#">Business Visa</a></h4>
+            <p class="serv-def">The travel authorization that allows an entrepreneur or company employees.</p>
+            <div class="serv-foot">
+                <img class="serv-next" src="png/next.png" alt="">
+                <div class="serv-num">
+                    <img class="num1" src="png/0.png" alt="">
+                    <img class="num2" src="png/1.png" alt="">
+                </div>
+            </div>
+           </div>
+            </li>
+            <li class="splide__slide">
+           <div class="coun-body down">
+                <div class="serv-icon">
+                    <img src="png/002-passport-1.png" alt="">
+                    <hr>
+                </div>
+                <h4 class="serv-title"><a href="#">Diplomatic Official Visa</a></h4>
+                <p class="serv-def">Issuance of Diplomatic/Official Visas to foreign diplomats/officials.</p>
+                <div class="serv-foot">
+                    <img class="serv-next" src="png/next.png" alt="">
+                    <div class="serv-num">
+                        <img class="num1" src="png/0.png" alt="">
+                        <img class="num2" src="png/2.png" alt="">
+                    </div>
+                    </div>
+           </div>
+            </li>
+            <li class="splide__slide">
+           <div class="coun-body">
+                <div class="serv-icon">
+                    <img src="png/003-visa.png" alt="">
+                    <hr>
+                </div>
+                <h4 class="serv-title"><a href="#">Family Visa</a></h4>
+                <p class="serv-def">A temporary authorization which allows you to enter the country for a fixed period of time.</p>
+                <div class="serv-foot">
+                    <img class="serv-next" src="png/next.png" alt="">
+                    <div class="serv-num">
+                        <img class="num1" src="png/0.png" alt="">
+                        <img class="num2" src="png/3.png" alt="">
+                    </div>
+                    </div>
+           </div>
+            </li>
+            <li class="splide__slide">
+           <div class="coun-body down">
+                <div class="serv-icon">
+                    <img src="png/magistrate.png" alt="">
+                    <hr>
+                </div>
+                <h4 class="serv-title"><a href="#">Student Visa</a></h4>
+                <p class="serv-def">A stamp put in your passport, which allows you to enter or leave a particular country.</p>
+                <div class="serv-foot">
+                    <img class="serv-next" src="png/next.png" alt="">
+                    <div class="serv-num">
+                        <img class="num1" src="png/0.png" alt="">
+                        <img class="num2" src="png/4.png" alt="">
+                    </div>
+                </div>
+           </div>
+            </li>
+            <li class="splide__slide">
+           <div class="coun-body">
+                <div class="serv-icon">
+                    <img src="png/passport.png" alt="">
+                    <hr>
+                </div>
+                <h4 class="serv-title"><a href="#">Temporary Work Visa</a></h4>
+                <p class="serv-def">Temporary work visas, that is, visas offering a limited stay of employment in this country.</p>
+                <div class="serv-foot">
+                    <img class="serv-next" src="png/next.png" alt="">
+                    <div class="serv-num">
+                        <img class="num1" src="png/0.png" alt="">
+                        <img class="num2" src="png/5.png" alt="">
+                    </div>
+                </div>
+           </div>
+           </li>
+           <li class="splide__slide">
+            <div class="coun-body down">
+                 <div class="serv-icon">
+                     <img src="png/visitor.png" alt="">
+                     <hr>
+                 </div>
+                 <h4 class="serv-title"><a href="#">Visitor Visa</a></h4>
+                 <p class="serv-def">A stamp put in your passport, which allows you to enter or leave a particular country.</p>
+                 <div class="serv-foot">
+                     <img class="serv-next" src="png/next.png" alt="">
+                     <div class="serv-num">
+                         <img class="num1" src="png/0.png" alt="">
+                         <img class="num2" src="png/6.png" alt="">
+                     </div>
+                 </div>
+            </div>
+             </li>
+          </ul>
+        </div>
+    <h6>Don’t Hesitate, Contact us for Better Help and Services.<a href="#">Explore all Visa Categories.</a></h6>
+
+        </div>
+    </div>
+</section>
+
+<section class="count">
+    <div class="container">
+        <div class="row">
+            <div class="col-3 ">
+                <div class="count-in">
+                    <div class="count-icon">
+                        <img src="png/001-support.png" alt="">
+                    </div>
+                    <h4 class="count-num"><span id="1">1276</span>+</h4>
+                    <h4 class="count-title">SUPPORT THREADS</h4>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="count-in">
+                    <div class="count-icon">
+                        <img src="png/002-link.png" alt="">
+                        </div>
+                        <h4 class="count-num" id="2">1000+</h4>
+                        <h4 class="count-title">RESOLVED</h4>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="count-in">
+                    <div class="count-icon">
+                        <img src="png/003-alarm-clock.png" alt="">
+                        </div>
+                        <h4 class="count-num" id="3">250+</h4>
+                        <h4 class="count-title">HOURS WORKED</h4>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="count-in">
+                    <div class="count-icon">
+                        <img class="img-4" src="png/004-smile.png" alt="">
+                        </div>
+                        <h4 class="count-num" id="4">2800+</h4>
+                        <h4 class="count-title">HAPPY COSTOMERS</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="assets/splide.min.js"></script>
+<script src="app.js?v4"></script>
+<script>
+    new Splide( '.splide1',{
+        fixedWidth : '16rem',
+        fixedHeight: '24rem',
+        gap : '2rem',
+        type : 'loop',
+        perPage: 3,
+        arrows : false,
+        pagination:false,
+        autoplay:true,
+        rewind:true,
+        rewindSpeed:4000,
+        perMove:1
+      } ).mount();
+
+function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        obj.innerHTML = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+const obj = document.getElementById("");
+animateValue(obj, 0, 1276, 5500);
+</script>
+</body>
+</html>
